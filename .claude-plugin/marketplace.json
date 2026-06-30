@@ -4,7 +4,7 @@
     "name": "arthuroc21",
     "url": "https://github.com/arthuroc21"
   },
-  "description": "Curated, installable Claude skills collected by arthuroc21. Third-party skills are referenced from their source repos or redistributed under their original licenses (see each plugin).",
+  "description": "A curated, complete catalog of Claude skills — referenced from their source repos (so updates pull the authors' latest) with two bundled under their own licenses.",
   "plugins": [
     {
       "name": "ui-ux-pro-max",
@@ -12,7 +12,7 @@
         "source": "url",
         "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git"
       },
-      "description": "UI/UX design intelligence — searchable databases of styles, palettes, font pairings, charts and UX guidelines across 10+ stacks.",
+      "description": "UI/UX design intelligence — styles, palettes, font pairings, charts, UX guidelines across 10+ stacks.",
       "category": "design",
       "license": "MIT"
     },
@@ -22,23 +22,509 @@
         "source": "url",
         "url": "https://github.com/obra/superpowers.git"
       },
-      "description": "A development methodology of composable skills — TDD, systematic debugging, planning, code review, worktrees, brainstorming, and more.",
+      "description": "Dev methodology — TDD, systematic debugging, planning, code review, worktrees, brainstorming.",
       "category": "development",
       "license": "MIT"
     },
     {
       "name": "frontend-design",
       "source": "./frontend-design",
-      "description": "Distinctive, intentional UI/visual design guidance (palette, typography, layout).",
+      "description": "Distinctive, intentional UI/visual design guidance.",
       "category": "design",
       "license": "Apache-2.0"
     },
     {
       "name": "webapp-testing",
       "source": "./webapp-testing",
-      "description": "Test local web apps with Playwright — verify behavior, debug UI, screenshots, logs.",
+      "description": "Test local web apps with Playwright.",
       "category": "testing",
       "license": "Apache-2.0"
+    },
+    {
+      "name": "code-simplifier",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/code-simplifier"
+      },
+      "description": "Agent that simplifies and refines code for clarity, consistency, and maintainability while preserving functionality. Focuses on recently modified code…",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "code-modernization",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/code-modernization"
+      },
+      "description": "Modernize legacy codebases (COBOL, legacy Java/C++, monolith web apps) with a structured preflight / assess / map / extract-rules / brief / reimagine …",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "feature-dev",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/feature-dev"
+      },
+      "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "security-guidance",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/security-guidance"
+      },
+      "description": "Security review for Claude-generated code. Pattern-based warnings on edits, LLM-powered diff review on Stop, and an agentic commit reviewer that catch…",
+      "category": "security",
+      "license": "—"
+    },
+    {
+      "name": "claude-md-management",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/claude-md-management"
+      },
+      "description": "Tools to maintain and improve CLAUDE.md files - audit quality, capture session learnings, and keep project memory current.",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "claude-code-setup",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/claude-code-setup"
+      },
+      "description": "Analyze codebases and recommend tailored Claude Code automations such as hooks, skills, MCP servers, and subagents.",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "session-report",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/session-report"
+      },
+      "description": "Generate an explorable HTML report of Claude Code session usage — tokens, cache efficiency, subagents, skills, and the most expensive prompts — from l…",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "hookify",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/hookify"
+      },
+      "description": "Easily create custom hooks to prevent unwanted behaviors by analyzing conversation patterns or from explicit instructions. Define rules via simple mar…",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "ralph-loop",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/ralph-loop"
+      },
+      "description": "Interactive self-referential AI loops for iterative development, implementing the Ralph Wiggum technique. Claude works on the same task repeatedly, se…",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "explanatory-output-style",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/explanatory-output-style"
+      },
+      "description": "Adds educational insights about implementation choices and codebase patterns (mimics the deprecated Explanatory output style)",
+      "category": "learning",
+      "license": "—"
+    },
+    {
+      "name": "playground",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/playground"
+      },
+      "description": "Creates interactive HTML playgrounds — self-contained single-file explorers with visual controls, live preview, and prompt output with copy button. In…",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "commit-commands",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/commit-commands"
+      },
+      "description": "Commands for git commit workflows including commit, push, and PR creation",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "plugin-dev",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/plugin-dev"
+      },
+      "description": "Comprehensive toolkit for developing Claude Code plugins. Includes 7 expert skills covering hooks, MCP integration, commands, agents, and best practic…",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "agent-sdk-dev",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/agent-sdk-dev"
+      },
+      "description": "Development kit for working with the Claude Agent SDK",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "mcp-server-dev",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/mcp-server-dev"
+      },
+      "description": "Skills for designing and building MCP servers that work seamlessly with Claude. Guides you through deployment models (remote HTTP, MCPB, local), tool …",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "mcp-apps",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/modelcontextprotocol/ext-apps.git",
+        "path": "plugins/mcp-apps"
+      },
+      "description": "Skills for creating MCP Apps with the MCP Apps SDK",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "serena",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "external_plugins/serena"
+      },
+      "description": "Semantic code analysis MCP server providing intelligent code understanding, refactoring suggestions, and codebase navigation through language server p…",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "desktop-commander",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP.git",
+        "path": "plugins/claude"
+      },
+      "description": "MCP server for terminal commands, process management, and file operations across text, code, PDF, DOCX, Excel, images, and structured data.",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "chrome-devtools-mcp",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp.git"
+      },
+      "description": "Control and inspect a live Chrome browser from your coding agent. Record performance traces, analyze network requests, check console messages with sou…",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "playwright",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "external_plugins/playwright"
+      },
+      "description": "Browser automation and end-to-end testing MCP server by Microsoft. Enables Claude to interact with web pages, take screenshots, fill forms, click elem…",
+      "category": "testing",
+      "license": "—"
+    },
+    {
+      "name": "math-olympiad",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/math-olympiad"
+      },
+      "description": "Solve competition math (IMO, Putnam, USAMO) with adversarial verification that catches what self-verification misses. Fresh-context verifiers attack p…",
+      "category": "math",
+      "license": "—"
+    },
+    {
+      "name": "data-engineering",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/astronomer/agents.git"
+      },
+      "description": "Data engineering plugin - warehouse exploration, pipeline authoring, Airflow integration",
+      "category": "",
+      "license": "—"
+    },
+    {
+      "name": "project-artifact",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/project-artifact"
+      },
+      "description": "Generate and publish a living project status page — overview & success criteria, the workstream sequence, and next steps — as a shareable claude.ai ar…",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "typescript-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/typescript-lsp"
+      },
+      "description": "TypeScript/JavaScript language server for enhanced code intelligence",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "pyright-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/pyright-lsp"
+      },
+      "description": "Python language server (Pyright) for type checking and code intelligence",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "csharp-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/csharp-lsp"
+      },
+      "description": "C# language server for code intelligence",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "jdtls-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/jdtls-lsp"
+      },
+      "description": "Java language server (Eclipse JDT.LS) for code intelligence",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "php-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/php-lsp"
+      },
+      "description": "PHP language server (Intelephense) for code intelligence",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "clangd-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/clangd-lsp"
+      },
+      "description": "C/C++ language server (clangd) for code intelligence",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "swift-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "plugins/swift-lsp"
+      },
+      "description": "Swift language server (SourceKit-LSP) for code intelligence",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "github",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "external_plugins/github"
+      },
+      "description": "Official GitHub MCP server for repository management. Create issues, manage pull requests, review code, search repositories, and interact with GitHub'…",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "figma",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/figma/mcp-server-guide.git"
+      },
+      "description": "Figma design platform integration. Access design files, extract component information, read design tokens, and translate designs into code. Bridge the…",
+      "category": "design",
+      "license": "—"
+    },
+    {
+      "name": "canva",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/canva-sdks/canva-skills.git",
+        "path": "plugins/canva"
+      },
+      "description": "Create, edit, review, resize, and brand-check Canva designs with the Canva MCP server.",
+      "category": "design",
+      "license": "—"
+    },
+    {
+      "name": "notion",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/makenotion/claude-code-notion-plugin.git"
+      },
+      "description": "Notion workspace integration. Search pages, create and update documents, manage databases, and access your team's knowledge base directly from Claude …",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "monday-crm",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/mondaycom/mcp.git",
+        "path": "plugins/monday-crm"
+      },
+      "description": "Run your monday CRM in plain language. Build a pipeline from scratch, start the day with a ranked deal briefing, spin up a forecast dashboard, audit b…",
+      "category": "productivity",
+      "license": "—"
+    },
+    {
+      "name": "firebase",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/anthropics/claude-plugins-official.git",
+        "path": "external_plugins/firebase"
+      },
+      "description": "Google Firebase MCP integration. Manage Firestore databases, authentication, cloud functions, hosting, and storage. Build and manage your Firebase bac…",
+      "category": "database",
+      "license": "—"
+    },
+    {
+      "name": "looker",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/gemini-cli-extensions/looker.git"
+      },
+      "description": "Connect to Looker and interact with your data using LookML.",
+      "category": "database",
+      "license": "—"
+    },
+    {
+      "name": "dataverse",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/microsoft/Dataverse-skills.git",
+        "path": ".github/plugins/dataverse"
+      },
+      "description": "Agent skills for building on, analyzing, and managing Microsoft Dataverse — with Dataverse MCP, PAC CLI, and Python SDK.",
+      "category": "database",
+      "license": "—"
+    },
+    {
+      "name": "datahub-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/datahub-project/datahub-skills.git"
+      },
+      "description": "DataHub development and interaction toolkit with connector planning, PR review, catalog search, metadata enrichment, lineage tracing, data quality man…",
+      "category": "database",
+      "license": "—"
+    },
+    {
+      "name": "huggingface-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/huggingface/skills.git"
+      },
+      "description": "Build, train, evaluate, and use open source AI models, datasets, and spaces.",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "liquid-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Shopify/liquid-skills.git",
+        "path": "plugins/liquid-skills"
+      },
+      "description": "Liquid language fundamentals, CSS/JS/HTML coding standards, and WCAG accessibility patterns for Shopify themes",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "atomic-agents",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/BrainBlend-AI/atomic-agents.git",
+        "path": "claude-plugin/atomic-agents"
+      },
+      "description": "Comprehensive development workflow for building AI agents with the Atomic Agents framework. Includes specialized agents for schema design, architectur…",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "microsoft-docs",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/MicrosoftDocs/mcp.git"
+      },
+      "description": "Access official Microsoft documentation, API references, and code samples for Azure, .NET, Windows, and more.",
+      "category": "development",
+      "license": "—"
+    },
+    {
+      "name": "wordpress.com",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/Automattic/claude-code-wordpress.com.git"
+      },
+      "description": "Uses Claude Code to create and edit WordPress sites with WordPress Studio before deploying changes to your WordPress.com site.",
+      "category": "",
+      "license": "—"
+    },
+    {
+      "name": "find-skills",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/vercel-labs/skills.git",
+        "path": "skills/find-skills"
+      },
+      "description": "Meta-skill: discover & install other agent skills.",
+      "category": "productivity",
+      "license": "NONE (no license in source)"
     }
   ]
 }
