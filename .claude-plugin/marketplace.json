@@ -1,0 +1,44 @@
+{
+  "name": "claude-skills-library",
+  "owner": {
+    "name": "arthuroc21",
+    "url": "https://github.com/arthuroc21"
+  },
+  "description": "Curated, installable Claude skills collected by arthuroc21. Third-party skills are referenced from their source repos or redistributed under their original licenses (see each plugin).",
+  "plugins": [
+    {
+      "name": "ui-ux-pro-max",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git"
+      },
+      "description": "UI/UX design intelligence — searchable databases of styles, palettes, font pairings, charts and UX guidelines across 10+ stacks.",
+      "category": "design",
+      "license": "MIT"
+    },
+    {
+      "name": "superpowers",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/obra/superpowers.git"
+      },
+      "description": "A development methodology of composable skills — TDD, systematic debugging, planning, code review, worktrees, brainstorming, and more.",
+      "category": "development",
+      "license": "MIT"
+    },
+    {
+      "name": "frontend-design",
+      "source": "./frontend-design",
+      "description": "Distinctive, intentional UI/visual design guidance (palette, typography, layout).",
+      "category": "design",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "webapp-testing",
+      "source": "./webapp-testing",
+      "description": "Test local web apps with Playwright — verify behavior, debug UI, screenshots, logs.",
+      "category": "testing",
+      "license": "Apache-2.0"
+    }
+  ]
+}

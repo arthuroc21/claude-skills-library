@@ -1,0 +1,10 @@
+{
+  "name": "webapp-testing",
+  "description": "Toolkit for testing local web apps with Playwright — verify frontend behavior, debug UI, capture screenshots, view browser logs.",
+  "author": {
+    "name": "Anthropic"
+  },
+  "homepage": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
+  "repository": "https://github.com/anthropics/skills",
+  "license": "Apache-2.0"
+}

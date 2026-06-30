@@ -1,0 +1,10 @@
+{
+  "name": "frontend-design",
+  "description": "Guidance for distinctive, intentional visual design when building or reshaping UI — palette, typography, layout that avoids templated defaults.",
+  "author": {
+    "name": "Anthropic"
+  },
+  "homepage": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+  "repository": "https://github.com/anthropics/skills",
+  "license": "Apache-2.0"
+}
