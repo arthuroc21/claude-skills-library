@@ -2,7 +2,22 @@
 
 A curated **Claude Code plugin marketplace** — the complete set of skills `arthuroc21` uses, installable from one place with updates.
 
-## Install (Claude Code)
+## One command — install everything (smart, skips what you already have)
+
+Run in a terminal. It adds the marketplace and installs the general-use set, **skipping anything you already have** (no duplicates):
+
+**Windows (PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/arthuroc21/claude-skills-library/main/install.ps1 | iex
+```
+**macOS / Linux / WSL:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/arthuroc21/claude-skills-library/main/install.sh | bash
+```
+
+Requires the `claude` CLI + a paid Claude plan. Product-specific plugins (Figma, Notion, …) aren't auto-installed — the script prints them so you can add the ones you use.
+
+## Or do it manually
 
 ```text
 /plugin marketplace add arthuroc21/claude-skills-library
