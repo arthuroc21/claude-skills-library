@@ -1,75 +1,69 @@
-# Full setup — everything, in one go
+# Full setup — everything, from one marketplace
 
-This installs the **complete** set that `arthuroc21` uses, in **Claude Code**. It pulls from three places:
-1. **This marketplace** (`claude-skills-library`) — the hand-picked skills not available officially.
-2. **Anthropic's official marketplace** (`claude-plugins-official`) — the rest.
-3. **Source** — `find-skills` (its repo has no license, so it can't be redistributed).
+This installs the **complete** set in **Claude Code** — all from this single marketplace (it references the official plugins for you, so you don't add anything else).
 
-> Prereqs: the `claude` CLI installed and a paid Claude plan (Pro/Max/Team/Enterprise). Review before running. The **product-specific** plugins are commented out — uncomment only the ones whose product you actually use. LSPs: keep only your languages.
+> Prereqs: the `claude` CLI installed + a paid Claude plan (Pro/Max/Team/Enterprise). Review before running. **Product-specific** plugins are commented out — uncomment only what you use. **LSPs**: keep only your languages. Tip: you can also just run `/plugin` and browse/install interactively.
 
 ```bash
-# 1) Register both marketplaces
-claude plugin marketplace add anthropics/claude-plugins-official
+# Add the marketplace (this one references everything)
 claude plugin marketplace add arthuroc21/claude-skills-library
 
-# 2) Curated skills (from this library — not in the official marketplace)
+# Curated skills + general-use (safe to take all)
 claude plugin install ui-ux-pro-max@claude-skills-library
 claude plugin install superpowers@claude-skills-library
 claude plugin install frontend-design@claude-skills-library
 claude plugin install webapp-testing@claude-skills-library
+claude plugin install find-skills@claude-skills-library
+claude plugin install code-simplifier@claude-skills-library
+claude plugin install code-modernization@claude-skills-library
+claude plugin install feature-dev@claude-skills-library
+claude plugin install security-guidance@claude-skills-library
+claude plugin install claude-md-management@claude-skills-library
+claude plugin install claude-code-setup@claude-skills-library
+claude plugin install session-report@claude-skills-library
+claude plugin install hookify@claude-skills-library
+claude plugin install ralph-loop@claude-skills-library
+claude plugin install explanatory-output-style@claude-skills-library
+claude plugin install playground@claude-skills-library
+claude plugin install commit-commands@claude-skills-library
+claude plugin install plugin-dev@claude-skills-library
+claude plugin install agent-sdk-dev@claude-skills-library
+claude plugin install mcp-server-dev@claude-skills-library
+claude plugin install mcp-apps@claude-skills-library
+claude plugin install serena@claude-skills-library
+claude plugin install desktop-commander@claude-skills-library
+claude plugin install chrome-devtools-mcp@claude-skills-library
+claude plugin install playwright@claude-skills-library
+claude plugin install math-olympiad@claude-skills-library
+claude plugin install data-engineering@claude-skills-library
+claude plugin install project-artifact@claude-skills-library
 
-# 3) Official plugins — general-use (safe to take all)
-claude plugin install code-simplifier@claude-plugins-official
-claude plugin install code-modernization@claude-plugins-official
-claude plugin install feature-dev@claude-plugins-official
-claude plugin install security-guidance@claude-plugins-official
-claude plugin install claude-md-management@claude-plugins-official
-claude plugin install claude-code-setup@claude-plugins-official
-claude plugin install session-report@claude-plugins-official
-claude plugin install hookify@claude-plugins-official
-claude plugin install ralph-loop@claude-plugins-official
-claude plugin install explanatory-output-style@claude-plugins-official
-claude plugin install playground@claude-plugins-official
-claude plugin install commit-commands@claude-plugins-official
-claude plugin install plugin-dev@claude-plugins-official
-claude plugin install agent-sdk-dev@claude-plugins-official
-claude plugin install mcp-server-dev@claude-plugins-official
-claude plugin install mcp-apps@claude-plugins-official
-claude plugin install serena@claude-plugins-official
-claude plugin install desktop-commander@claude-plugins-official
-claude plugin install chrome-devtools-mcp@claude-plugins-official
-claude plugin install playwright@claude-plugins-official
-claude plugin install math-olympiad@claude-plugins-official
-claude plugin install data-engineering@claude-plugins-official
-claude plugin install project-artifact@claude-plugins-official
+# Language servers (LSPs) — keep only the languages you code in
+claude plugin install typescript-lsp@claude-skills-library
+claude plugin install pyright-lsp@claude-skills-library
+claude plugin install csharp-lsp@claude-skills-library
+claude plugin install jdtls-lsp@claude-skills-library
+claude plugin install php-lsp@claude-skills-library
+claude plugin install clangd-lsp@claude-skills-library
+claude plugin install swift-lsp@claude-skills-library
 
-# 4) Language servers (LSPs) — keep only the languages you code in
-claude plugin install typescript-lsp@claude-plugins-official
-claude plugin install pyright-lsp@claude-plugins-official
-claude plugin install csharp-lsp@claude-plugins-official
-claude plugin install jdtls-lsp@claude-plugins-official
-claude plugin install php-lsp@claude-plugins-official
-claude plugin install clangd-lsp@claude-plugins-official
-claude plugin install swift-lsp@claude-plugins-official
-
-# 5) Product-specific — UNCOMMENT only what you actually use
-# claude plugin install github@claude-plugins-official
-# claude plugin install figma@claude-plugins-official
-# claude plugin install canva@claude-plugins-official
-# claude plugin install notion@claude-plugins-official
-# claude plugin install monday-crm@claude-plugins-official
-# claude plugin install firebase@claude-plugins-official
-# claude plugin install looker@claude-plugins-official
-# claude plugin install dataverse@claude-plugins-official
-# claude plugin install datahub-skills@claude-plugins-official
-# claude plugin install huggingface-skills@claude-plugins-official
-# claude plugin install liquid-skills@claude-plugins-official
-# claude plugin install atomic-agents@claude-plugins-official
-# claude plugin install microsoft-docs@claude-plugins-official
-# claude plugin install wordpress.com@claude-plugins-official
-
-# 6) find-skills — no license in its source repo, so install from source
-npx skills add https://github.com/vercel-labs/skills --skill find-skills
+# Product-specific — UNCOMMENT only what you actually use
+# claude plugin install github@claude-skills-library
+# claude plugin install figma@claude-skills-library
+# claude plugin install canva@claude-skills-library
+# claude plugin install notion@claude-skills-library
+# claude plugin install monday-crm@claude-skills-library
+# claude plugin install firebase@claude-skills-library
+# claude plugin install looker@claude-skills-library
+# claude plugin install dataverse@claude-skills-library
+# claude plugin install datahub-skills@claude-skills-library
+# claude plugin install huggingface-skills@claude-skills-library
+# claude plugin install liquid-skills@claude-skills-library
+# claude plugin install atomic-agents@claude-skills-library
+# claude plugin install microsoft-docs@claude-skills-library
+# claude plugin install wordpress.com@claude-skills-library
 ```
 
-**Cowork** is separate — these are Claude Code plugins. In Cowork, install via Customize → Plugins/Connectors (only the product integrations like Figma/Notion/Canva/Monday exist there).
+Update everything later with `/plugin marketplace update claude-skills-library`.
+
+**Cowork** is separate — these are Claude Code plugins. In Cowork, install via Customize → Plugins/Connectors (only product integrations like Figma/Notion/Canva/Monday exist there).
